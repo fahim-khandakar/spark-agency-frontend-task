@@ -1,7 +1,7 @@
 import logo from "./../../assets/Logo.png";
 const Navbar = () => {
   return (
-    <nav className="">
+    <nav className="absolute top-0 left-0 w-full z-10  text-white">
       <div className="flex justify-between items-center px-[60px] pt-[60px]">
         {/* Left Section - Logo & Website Name */}
         <div className="flex items-center space-x-3">
