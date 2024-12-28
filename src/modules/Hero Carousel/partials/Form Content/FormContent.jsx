@@ -85,7 +85,6 @@ FormContent.propTypes = {
     data: PropTypes.shape({
       sub_title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      button: PropTypes.string.isRequired,
     }),
     form_title: PropTypes.string.isRequired,
   }),

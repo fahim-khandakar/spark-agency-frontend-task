@@ -1,5 +1,7 @@
+import PropTypes from "prop-types";
 import logo from "./../../assets/Logo.png";
-const Navbar = () => {
+const Navbar = ({ activeSlide }) => {
+  console.log("active", activeSlide);
   return (
     <nav className="absolute top-0 left-0 w-full z-10  text-white">
       <div className="flex justify-between items-center px-[60px] pt-[60px]">
@@ -9,18 +11,19 @@ const Navbar = () => {
           <span className="text-4xl">GMK Dakonderhoud</span>
         </div>
 
-        {/* Middle Section - Routes */}
-        <div className="flex space-x-6">
-          <a href="#home" className="hover:text-gray-300 transition">
-            Diensten
-          </a>
-          <a href="#about" className="hover:text-gray-300 transition">
-            Over Ons
-          </a>
-          <a href="#services" className="hover:text-gray-300 transition">
-            Contact
-          </a>
-        </div>
+        {activeSlide === 6 && (
+          <div className="flex space-x-20">
+            <a href="#home" className="hover:text-gray-300 transition">
+              Diensten
+            </a>
+            <a href="#about" className="hover:text-gray-300 transition">
+              Over Ons
+            </a>
+            <a href="#services" className="hover:text-gray-300 transition">
+              Contact
+            </a>
+          </div>
+        )}
 
         {/* Right Section - Simple Sentence */}
         <div>
@@ -31,6 +34,9 @@ const Navbar = () => {
       </div>
     </nav>
   );
+};
+Navbar.propTypes = {
+  activeSlide: PropTypes.number.isRequired,
 };
 
 export default Navbar;

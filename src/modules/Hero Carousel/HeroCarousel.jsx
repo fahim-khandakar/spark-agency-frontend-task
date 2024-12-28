@@ -21,8 +21,10 @@ import FullBottomContent from "./partials/Full Bottom Content/FullBottomContent"
 import BottomLeftContent from "./partials/Bottom Left Content/BottomLeftContent";
 import CenterContent from "./partials/Center Content/CenterContent";
 import FormContent from "./partials/Form Content/FormContent";
+import { useState } from "react";
 
 const HeroCarousel = () => {
+  const [activeSlide, setActiveSlide] = useState(1);
   const slides = [
     {
       id: 1,
@@ -158,11 +160,17 @@ een offerte op`,
   return (
     <section className="relative w-full h-screen">
       {/* Navbar */}
-      <Navbar />
+      <Navbar activeSlide={activeSlide} />
 
       {/* Hero Carousel */}
       <div className="absolute inset-0">
-        <Swiper loop={true} className="h-full">
+        <Swiper
+          loop={true}
+          className="h-full"
+          onSlideChange={(swiper) =>
+            setActiveSlide(slides[swiper.activeIndex]?.id)
+          }
+        >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
               <div
