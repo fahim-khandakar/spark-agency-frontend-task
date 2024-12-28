@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const MiniCardLine = ({ items = [] }) => {
   return (
-    <div className="">
+    <section>
       {/* Horizontal connecting line */}
       <div className="absolute top-1/2 left-0 w-full ">
         <div className="h-[1px]  bg-white " />
@@ -49,7 +49,7 @@ const MiniCardLine = ({ items = [] }) => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const RightSideContent = ({ data }) => {
   return (
-    <div className="text-right flex justify-end pr-20">
+    <section className="text-right flex justify-end pr-20">
       <div className="w-1/2">
         <h1 className="text-[64px] text-heroTitle">{data?.title}</h1>
         <p className="text-xl text-primaryText">{data?.description}</p>
@@ -10,7 +10,7 @@ const RightSideContent = ({ data }) => {
           {data?.button}
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

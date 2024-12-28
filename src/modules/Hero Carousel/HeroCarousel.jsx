@@ -16,14 +16,20 @@ import Navbar from "../Navbar/Navbar";
 import MiniCardLine from "./partials/Mini Card/MiniCard";
 import Marquee from "react-fast-marquee";
 import RightSideContent from "./partials/Right Side Content/RightSideContent";
+import FullBottomContent from "./partials/Full Bottom Content/FullBottomContent";
 
 const HeroCarousel = () => {
   const slides = [
     {
       id: 1,
       image: rectangle1,
-      title: "Welcome to Our Service",
-      description: "We provide the best solutions for your needs.",
+      data: {
+        title: `Wij bieden een duurzame en passende oplossing voor uw klus.`,
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+
+        button: "Contact Us",
+      },
     },
     {
       id: 2,
@@ -112,8 +118,13 @@ const HeroCarousel = () => {
     {
       id: 7,
       image: rectangle7,
-      title: "Customer Satisfaction",
-      description: "Your happiness is our priority.",
+      data: {
+        title: `Wij bieden een duurzame en passende oplossing voor uw klus.`,
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+
+        button: "Contact Us",
+      },
     },
   ];
 
@@ -131,7 +142,7 @@ const HeroCarousel = () => {
                 className="w-full h-full bg-cover bg-center flex items-center"
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
-                <div className="w-full">
+                <main className="w-full">
                   {slide?.id === 2 && (
                     <Marquee>
                       <MiniCardLine items={slide?.items} />
@@ -140,7 +151,10 @@ const HeroCarousel = () => {
                   {(slide?.id === 4 || slide?.id === 5) && (
                     <RightSideContent data={slide?.data} />
                   )}
-                </div>
+                  {(slide?.id === 7 || slide?.id === 1) && (
+                    <FullBottomContent data={slide?.data} />
+                  )}
+                </main>
               </div>
             </SwiperSlide>
           ))}
