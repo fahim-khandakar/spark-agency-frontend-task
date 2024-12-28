@@ -7,6 +7,7 @@ export default {
         primaryText: "#E7E7E7",
         heroTitle: "#F9F6F2",
         btnBg: "#1677FF",
+        formTitle: "#11162E",
       },
     },
   },

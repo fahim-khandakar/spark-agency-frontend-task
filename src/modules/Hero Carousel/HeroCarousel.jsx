@@ -12,6 +12,7 @@ import rectangle4 from "../../assets/Rectangle 4.png";
 import rectangle5 from "../../assets/Rectangle 5.png";
 import rectangle6 from "../../assets/Rectangle 6.png";
 import rectangle7 from "../../assets/Rectangle 7.png";
+import rectangle46 from "../../assets/Rectangle 46.png";
 import Navbar from "../Navbar/Navbar";
 import MiniCardLine from "./partials/Mini Card/MiniCard";
 import Marquee from "react-fast-marquee";
@@ -19,6 +20,7 @@ import RightSideContent from "./partials/Right Side Content/RightSideContent";
 import FullBottomContent from "./partials/Full Bottom Content/FullBottomContent";
 import BottomLeftContent from "./partials/Bottom Left Content/BottomLeftContent";
 import CenterContent from "./partials/Center Content/CenterContent";
+import FormContent from "./partials/Form Content/FormContent";
 
 const HeroCarousel = () => {
   const slides = [
@@ -139,6 +141,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         button: "Contact Us",
       },
     },
+    {
+      id: 8,
+      image: rectangle46,
+      data: {
+        title: `Wij bieden een duurzame en passende oplossing voor uw klus.`,
+        sub_title: "Uw adres",
+        description: `Via uw adres kunnen we openbare en vrij verkrijgbare informatie, bijv. kadaster-gegevens en satelliet beelden,
+gebruiken om een optimaal beeld te vormen van uw dak.`,
+      },
+      form_title: `Vraag hieronder 
+een offerte op`,
+    },
   ];
 
   return (
@@ -152,8 +166,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
               <div
-                className="w-full h-full bg-cover bg-center flex items-center"
-                style={{ backgroundImage: `url(${slide.image})` }}
+                className={`
+                 w-full
+                 h-full bg-cover bg-center flex items-center`}
+                style={{
+                  backgroundImage: `url(${slide?.id != 8 && slide.image})`,
+                }}
               >
                 <main className="w-full">
                   {slide?.id === 2 && (
@@ -169,6 +187,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                   )}
                   {slide?.id === 3 && <BottomLeftContent data={slide?.data} />}
                   {slide?.id === 6 && <CenterContent data={slide?.data} />}
+                  {slide?.id === 8 && <FormContent data={slide} />}
                 </main>
               </div>
             </SwiperSlide>
