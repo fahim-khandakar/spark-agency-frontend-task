@@ -2,18 +2,18 @@ import PropTypes from "prop-types";
 
 const FormContent = ({ data }) => {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
       <div
         className={`
-        w-4/6
+        w-full md:w-4/6
         h-full bg-cover bg-center flex items-center`}
         style={{
           backgroundImage: `url(${data.image})`,
         }}
       >
-        <section className="px-28 flex items-center min-h-screen">
-          <div className=" flex justify-between items-center">
-            <div className="text-left ">
+        <section className="px-5 md:px-28 flex items-center min-h-screen ">
+          <div className=" flex justify-between items-center ">
+            <div className="text-left">
               <h4 className="font-medium text-2xl text-primaryText">
                 {data?.data?.sub_title}
               </h4>
@@ -28,12 +28,12 @@ const FormContent = ({ data }) => {
           </div>
         </section>
       </div>
-      <div className="w-2/6 flex items-center justify-center">
-        <div>
+      <div className="hidden  w-full md:w-2/6  md:flex items-center justify-center">
+        <div className="pt-10 md:pt-0 ">
           <h1 className="text-5xl text-center pb-5 text-formTitle w-2/3 mx-auto">
             {data?.form_title}
           </h1>
-          <div className="w-3/5 mx-auto space-y-4 border p-5">
+          <div className="w-4/5 md:w-3/5 mx-auto space-y-4 border p-5">
             <div className="space-y-1">
               <label htmlFor="name">Name</label>
               <input

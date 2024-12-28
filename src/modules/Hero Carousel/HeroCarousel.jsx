@@ -158,7 +158,7 @@ een offerte op`,
   ];
 
   return (
-    <section className="relative w-full h-screen">
+    <section className="relative w-full min-h-screen">
       {/* Navbar */}
       <Navbar activeSlide={activeSlide} />
 

@@ -2,12 +2,19 @@ import PropTypes from "prop-types";
 
 const FullBottomContent = ({ data }) => {
   return (
-    <section className="px-20 flex items-end min-h-screen pb-20">
-      <div className=" flex justify-between items-center gap-60">
-        <h1 className="text-[64px] w-1/2 text-heroTitle">{data?.title}</h1>
-        <div className="text-right w-1/2">
-          <p className="text-xl text-primaryText">{data?.description}</p>
-          <button className="bg-btnBg w-[280px] mt-5 rounded-full py-2 text-primaryText">
+    <section className="px-6 sm:px-20 flex items-end min-h-screen pb-10 sm:pb-20">
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-10 sm:gap-60 w-full">
+        {/* Title Section */}
+        <h1 className="text-3xl sm:text-[64px] text-heroTitle text-center sm:text-left sm:w-1/2">
+          {data?.title}
+        </h1>
+
+        {/* Description and Button Section */}
+        <div className="text-center sm:text-right sm:w-1/2">
+          <p className="text-base sm:text-xl text-primaryText">
+            {data?.description}
+          </p>
+          <button className="bg-btnBg w-full sm:w-[280px] mt-5 rounded-full py-2 text-primaryText">
             {data?.button}
           </button>
         </div>

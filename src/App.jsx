@@ -7,13 +7,13 @@ import ProductCarousel from "./modules/Product Carousel/ProductCarousel";
 
 function App() {
   return (
-    <>
+    <div>
       <HeroCarousel />
       <AboutUs />
       <ClientCarousel />
       <ProductCarousel />
       <Footer />
-    </>
+    </div>
   );
 }
 
