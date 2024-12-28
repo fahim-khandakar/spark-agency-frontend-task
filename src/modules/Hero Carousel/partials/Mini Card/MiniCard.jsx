@@ -1,51 +1,7 @@
-import avatar from "../../assets/Avatar.png";
+import avatar from "../../../../assets/Avatar.png";
+import PropTypes from "prop-types";
 
-const MiniCardLine = () => {
-  const items = [
-    {
-      id: 1,
-      name: "Fermin Vargas",
-      sub_role: "Construction",
-      role: "manager",
-      position: "top",
-    },
-    {
-      id: 2,
-      name: "Fermin Vargas",
-      sub_role: "Construction",
-      role: "manager",
-      position: "bottom",
-    },
-    {
-      id: 3,
-      name: "Fermin Vargas",
-      sub_role: "Construction",
-      role: "manager",
-      position: "top",
-    },
-    {
-      id: 4,
-      name: "Fermin Vargas",
-      sub_role: "Construction",
-      role: "manager",
-      position: "bottom",
-    },
-    {
-      id: 5,
-      name: "Fermin Vargas",
-      sub_role: "Construction",
-      role: "manager",
-      position: "top",
-    },
-    {
-      id: 6,
-      name: "Fermin Vargas",
-      sub_role: "Construction",
-      role: "manager",
-      position: "bottom",
-    },
-  ];
-
+const MiniCardLine = ({ items = [] }) => {
   return (
     <div className="">
       {/* Horizontal connecting line */}
@@ -67,7 +23,7 @@ const MiniCardLine = () => {
 
       <div className="relative flex  items-center justify-between  ">
         {items.map((item) => (
-          <div key={item.id} className="relative group">
+          <div key={item.id} className="relative">
             <div
               className={`
                 bg-white rounded-2xl shadow-md
@@ -95,6 +51,18 @@ const MiniCardLine = () => {
       </div>
     </div>
   );
+};
+
+MiniCardLine.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      sub_role: PropTypes.string,
+      role: PropTypes.string,
+      position: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default MiniCardLine;
