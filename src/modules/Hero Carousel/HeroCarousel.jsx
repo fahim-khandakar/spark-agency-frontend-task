@@ -14,6 +14,7 @@ import rectangle6 from "../../assets/Rectangle 6.png";
 import rectangle7 from "../../assets/Rectangle 7.png";
 import Navbar from "../Navbar/Navbar";
 import MiniCardLine from "../../Components/Mini Card/MiniCard";
+import Marquee from "react-fast-marquee";
 
 const HeroCarousel = () => {
   const slides = [
@@ -76,7 +77,9 @@ const HeroCarousel = () => {
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
                 <div className="w-full">
-                  <MiniCardLine />
+                  <Marquee>
+                    <MiniCardLine />
+                  </Marquee>
                 </div>
               </div>
             </SwiperSlide>

@@ -1,6 +1,6 @@
 import avatar from "../../assets/Avatar.png";
 
-export default function MiniCardLine() {
+const MiniCardLine = () => {
   const items = [
     {
       id: 1,
@@ -37,13 +37,20 @@ export default function MiniCardLine() {
       role: "manager",
       position: "top",
     },
+    {
+      id: 6,
+      name: "Fermin Vargas",
+      sub_role: "Construction",
+      role: "manager",
+      position: "bottom",
+    },
   ];
 
   return (
-    <div className="relative w-full py-40">
+    <div className="">
       {/* Horizontal connecting line */}
       <div className="absolute top-1/2 left-0 w-full ">
-        <div className="h-[1px] w-full bg-white " />
+        <div className="h-[1px]  bg-white " />
         {items.map((item, index) => (
           <div
             key={item.id}
@@ -58,7 +65,7 @@ export default function MiniCardLine() {
         ))}
       </div>
 
-      <div className="relative flex justify-between items-center px-[30px]">
+      <div className="relative flex  items-center justify-between  ">
         {items.map((item) => (
           <div key={item.id} className="relative group">
             <div
@@ -88,4 +95,6 @@ export default function MiniCardLine() {
       </div>
     </div>
   );
-}
+};
+
+export default MiniCardLine;
