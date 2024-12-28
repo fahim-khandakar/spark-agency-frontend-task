@@ -17,6 +17,7 @@ import MiniCardLine from "./partials/Mini Card/MiniCard";
 import Marquee from "react-fast-marquee";
 import RightSideContent from "./partials/Right Side Content/RightSideContent";
 import FullBottomContent from "./partials/Full Bottom Content/FullBottomContent";
+import BottomLeftContent from "./partials/Bottom Left Content/BottomLeftContent";
 
 const HeroCarousel = () => {
   const slides = [
@@ -82,8 +83,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     {
       id: 3,
       image: rectangle3,
-      title: "Customer Satisfaction",
-      description: "Your happiness is our priority.",
+      data: {
+        title: `Wij bieden een duurzame en passende oplossing voor uw klus.`,
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+
+        button: "Contact Us",
+      },
     },
     {
       id: 4,
@@ -154,6 +160,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                   {(slide?.id === 7 || slide?.id === 1) && (
                     <FullBottomContent data={slide?.data} />
                   )}
+                  {slide?.id === 3 && <BottomLeftContent data={slide?.data} />}
                 </main>
               </div>
             </SwiperSlide>
