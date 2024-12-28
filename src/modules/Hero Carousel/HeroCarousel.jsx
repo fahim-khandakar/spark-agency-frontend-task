@@ -18,6 +18,7 @@ import Marquee from "react-fast-marquee";
 import RightSideContent from "./partials/Right Side Content/RightSideContent";
 import FullBottomContent from "./partials/Full Bottom Content/FullBottomContent";
 import BottomLeftContent from "./partials/Bottom Left Content/BottomLeftContent";
+import CenterContent from "./partials/Center Content/CenterContent";
 
 const HeroCarousel = () => {
   const slides = [
@@ -118,8 +119,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     {
       id: 6,
       image: rectangle6,
-      title: "Customer Satisfaction",
-      description: "Your happiness is our priority.",
+      data: {
+        title: `Wij bieden een duurzame en passende oplossing voor uw klus.`,
+        sub_title: "Uw adres",
+        description: `Via uw adres kunnen we openbare en vrij verkrijgbare informatie, bijv. kadaster-gegevens en satelliet beelden,
+gebruiken om een optimaal beeld te vormen van uw dak.`,
+
+        button: "Contact Us",
+      },
     },
     {
       id: 7,
@@ -161,6 +168,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                     <FullBottomContent data={slide?.data} />
                   )}
                   {slide?.id === 3 && <BottomLeftContent data={slide?.data} />}
+                  {slide?.id === 6 && <CenterContent data={slide?.data} />}
                 </main>
               </div>
             </SwiperSlide>
