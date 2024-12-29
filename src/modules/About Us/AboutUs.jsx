@@ -8,7 +8,7 @@ const AboutUs = () => {
   return (
     <section>
       {/* Title */}
-      <h1 className="text-[80px] md:text-[200px] lg:text-[347px] font-bold text-formTitle text-center">
+      <h1 className="text-[80px] md:text-[200px] lg:text-[347px] font-bold text-formTitle text-center font-nobile">
         {aboutUsData?.title}
       </h1>
       {/* Content */}

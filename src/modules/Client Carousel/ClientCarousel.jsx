@@ -31,7 +31,7 @@ export default function ClientCarousel() {
   );
 
   return (
-    <section className="py-20">
+    <section className="py-20 font-actor">
       <div className="wrapper">
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>

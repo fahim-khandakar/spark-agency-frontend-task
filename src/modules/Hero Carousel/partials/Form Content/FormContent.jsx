@@ -11,7 +11,7 @@ const FormContent = ({ data }) => {
           backgroundImage: `url(${data.image})`,
         }}
       >
-        <section className="px-5 md:px-28 flex items-center min-h-screen ">
+        <section className="px-5 md:px-28 flex items-center min-h-screen font-actor">
           <div className=" flex justify-between items-center ">
             <div className="text-left">
               <h4 className="font-medium text-2xl text-primaryText">
@@ -30,10 +30,10 @@ const FormContent = ({ data }) => {
       </div>
       <div className="hidden  w-full md:w-2/6  md:flex items-center justify-center">
         <div className="pt-10 md:pt-0 ">
-          <h1 className="text-5xl text-center pb-5 text-formTitle w-2/3 mx-auto">
+          <h1 className="text-5xl text-center pb-5 text-formTitle w-2/3 mx-auto font-tiltWarp">
             {data?.form_title}
           </h1>
-          <div className="w-3/5 md:w-4/5 mx-auto space-y-4 border p-5">
+          <div className="w-3/5 md:w-4/5 mx-auto space-y-4 border p-5 font-actor">
             <div className="space-y-1">
               <label htmlFor="name">Name</label>
               <input

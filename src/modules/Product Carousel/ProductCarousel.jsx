@@ -12,7 +12,7 @@ import "./styles.css";
 const ProductCarousel = () => {
   return (
     <section>
-      <h1 className="text-[40px] md:text-[80px] lg:text-[300px] font-bold text-formTitle text-center mb-12">
+      <h1 className="text-[40px] md:text-[80px] lg:text-[300px] font-bold text-formTitle text-center mb-12 font-nobile">
         {data?.title}
       </h1>
       <Swiper
@@ -34,7 +34,7 @@ const ProductCarousel = () => {
         {data?.carousels?.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="swiperSlideProduct relative overflow-hidden "
+            className="swiperSlideProduct relative overflow-hidden font-actor"
           >
             <div className="relative w-full h-80">
               {/* Image (no blur) */}

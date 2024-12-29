@@ -3,7 +3,7 @@ import logo from "./../../assets/Logo.png";
 
 const Navbar = ({ activeSlide }) => {
   return (
-    <nav className="absolute top-0 left-0 w-full z-10 text-white">
+    <nav className="absolute top-0 left-0 w-full z-10 text-white font-tiltWarp">
       <div className="flex justify-between items-center px-4 sm:px-[60px] pt-6 sm:pt-[60px]">
         {/* Left Section - Logo & Website Name */}
         <div className="flex items-center space-x-2 sm:space-x-3">

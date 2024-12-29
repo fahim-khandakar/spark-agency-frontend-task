@@ -5,12 +5,12 @@ const CenterContent = ({ data }) => {
     <section className="px-5 sm:px-10 lg:px-20 flex items-center min-h-screen">
       <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
         {/* Title */}
-        <h1 className="text-3xl sm:text-5xl lg:text-[64px] w-full lg:w-1/2 text-heroTitle text-center lg:text-left">
+        <h1 className="text-3xl sm:text-5xl lg:text-[64px] w-full lg:w-1/2 text-heroTitle text-center lg:text-left font-tiltWarp">
           {data?.title}
         </h1>
 
         {/* Content */}
-        <div className="w-full lg:w-1/2 text-left">
+        <div className="w-full lg:w-1/2 text-left font-actor">
           <h4 className="font-medium text-lg sm:text-xl lg:text-2xl text-primaryText">
             {data?.sub_title}
           </h4>
