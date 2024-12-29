@@ -36,9 +36,9 @@ export default function ClientCarousel() {
         <div className="scene">
           <div className="carousel keen-slider" ref={sliderRef}>
             {carouselData?.carousels?.map((item, index) => (
-              <div key={index} className="carousel__cell  ">
+              <div key={index} className="carousel__cell">
                 <img
-                  className="h-full w-full rounded-xl"
+                  className="h-full w-full rounded-xl object-cover"
                   src={item?.img}
                   alt="Carousel Image"
                 />
@@ -47,7 +47,7 @@ export default function ClientCarousel() {
           </div>
         </div>
       </div>
-      <div className="mt-72 px-20 space-y-5 text-formTitle">
+      <div className="mt-20 md:mt-80 px-20 space-y-5 text-formTitle">
         <p>{carouselData?.descriptionOne}</p>
         <p>{carouselData?.descriptionOne}</p>
       </div>
