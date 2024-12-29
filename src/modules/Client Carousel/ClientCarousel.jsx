@@ -47,7 +47,7 @@ export default function ClientCarousel() {
           </div>
         </div>
       </div>
-      <div className="mt-20 md:mt-80 px-20 space-y-5 text-formTitle">
+      <div className="mt-20 md:mt-80 md:px-20 px-5 space-y-5 text-formTitle">
         <p>{carouselData?.descriptionOne}</p>
         <p>{carouselData?.descriptionOne}</p>
       </div>

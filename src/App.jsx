@@ -7,7 +7,7 @@ import ProductCarousel from "./modules/Product Carousel/ProductCarousel";
 
 function App() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <HeroCarousel />
       <AboutUs />
       <ClientCarousel />

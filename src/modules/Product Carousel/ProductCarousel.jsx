@@ -44,7 +44,7 @@ const ProductCarousel = () => {
                 className="w-full h-full object-cover rounded-xl"
               />
               {/* Content overlay with blurred background */}
-              <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-40 p-4 backdrop-blur-lg">
+              <div className="absolute bottom-5 md:bottom-0 left-0 w-full bg-black bg-opacity-40 p-4 backdrop-blur-lg">
                 <h2 className="text-white text-xl font-medium">{item?.name}</h2>
                 <p className="text-red-600 text-sm font-medium">
                   {item?.singer}
