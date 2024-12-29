@@ -5,7 +5,7 @@ const FullBottomContent = ({ data }) => {
     <section className="px-6 sm:px-20 flex items-end min-h-screen pb-10 sm:pb-20">
       <div className="flex flex-col sm:flex-row justify-between items-center gap-10 sm:gap-60 w-full">
         {/* Title Section */}
-        <h1 className="text-3xl sm:text-[64px] text-heroTitle text-center sm:text-left sm:w-1/2">
+        <h1 className="text-[34px] md:text-[64px] text-heroTitle text-center sm:text-left sm:w-1/2">
           {data?.title}
         </h1>
 

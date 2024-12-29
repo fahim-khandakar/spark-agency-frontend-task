@@ -31,11 +31,13 @@ const Navbar = ({ activeSlide }) => {
         )}
 
         {/* Right Section - Simple Sentence */}
-        <div className="text-xs sm:text-base">
-          <span className="text-[#E7E7E7]">
-            Spoed? Bel 020 1234567 of klik hier | Chat
-          </span>
-        </div>
+        {activeSlide === 6 && (
+          <div className="text-xs sm:text-base">
+            <span className="text-[#E7E7E7]">
+              Spoed? Bel 020 1234567 of klik hier | Chat
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Mobile Navigation - Links for Slide 6 */}

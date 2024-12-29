@@ -33,7 +33,7 @@ const FormContent = ({ data }) => {
           <h1 className="text-5xl text-center pb-5 text-formTitle w-2/3 mx-auto">
             {data?.form_title}
           </h1>
-          <div className="w-4/5 md:w-3/5 mx-auto space-y-4 border p-5">
+          <div className="w-3/5 md:w-4/5 mx-auto space-y-4 border p-5">
             <div className="space-y-1">
               <label htmlFor="name">Name</label>
               <input
